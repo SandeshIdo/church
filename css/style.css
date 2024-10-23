@@ -1,0 +1,483 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 16px;
+    font-family: Lato;
+}
+.container{
+    width: 90%;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navSection{
+    position: relative;
+    background-image: url(../img/back-original.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.overlay{
+    background-color: #0c0c0c;
+    opacity: 0.7;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+nav{
+    position: relative;
+    background-color: rgba(10, 10, 10, 0.6);
+}
+
+nav ul{
+    width: 90%;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+nav li{
+    height: 70px;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 0 20px;
+    display: flex;
+    align-items: center; 
+    height: 100%;
+    font-size: 13px;
+    letter-spacing: 0.6px;
+}
+
+nav a:hover{
+    color:#44A34E;
+    transition: all 0.3s ease;
+}
+/** This code section works for the sidebar nav **/
+.sidebar{
+    position:fixed;
+    top:0;
+    right:0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0px 10 px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menuButton{
+    display: none;
+}
+
+/** Side nav all CSS stops here.**/
+
+.headerContent{
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: inherit;
+    font-size: clamp(1.5rem,2.5vw,2.5rem);
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #ffffff;
+}
+.headerContentInner{
+    text-align: center;
+}
+
+/**Second section CSS commences **/
+.infoAndDetails{
+    background-color: #ffffff;
+    padding: 100px 0px 100px 0px;
+}
+/* .infoAndDetails .mainWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+.topElement{
+    font-size: 2.1rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.divider{
+    display: flex;
+    margin: 0 auto;
+    padding-top: 8px;
+    padding-bottom: 20px;
+}
+
+#greenDivider{
+    width: 100px;
+    margin: 0 auto;
+    border-style: solid;
+    color: #4cb74f;
+
+}
+.timeAndLocation{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.smallDetails{
+    line-height: 2em;
+    text-align: center;
+    padding: 0 15% 0 15%;
+}
+
+/**Expect Section **/
+.expectSection{
+    padding: 60px 0px 60px 0px;
+}
+.expectMain{
+    max-width: 1140px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.expectMainInner{
+    width: 100%;
+    display: flex;
+}
+
+.expectPic{
+    width: 50%;
+    background-image: url(../img/dai.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.expectInfo{
+    width: 50%;
+}
+.expectInfoInner{
+    padding: 50px 50px 50px 50px;
+}
+.paraDiv{
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+.paraLists ul{
+    line-height: 2em;
+    margin: 15px 0 15px 20px;
+}
+
+/**Youth section starts here **/
+
+.youthSection{
+    padding: 60px 0px 60px 0px;
+}
+.youthMain{
+    max-width: 1140px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.youthMainInner{
+    width: 100%;
+    display: flex;
+}
+.youthPic{
+    width: 50%;
+    background-image: url(../img/pic9.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.youthInfo{
+    width: 50%;
+}
+.youthInfoInner{
+    padding: 50px 50px 50px 50px;
+}
+.youthPara{
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+.youthDesc p{
+    line-height: 2em;
+}
+
+/** Vision Section Starts Here**/
+.visionSection{
+    background-image: url(../img/pic5.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 140px 0 140px 0;
+    color: white;
+    position: relative;
+}
+.visionMain{
+    max-width: 1140px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.visionInner{
+    width: 80%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.visionInnerOne{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.visionTopic{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+.visionDivider{
+    display: flex;
+    margin: 0 auto;
+    padding-top: 8px;
+    padding-bottom: 20px;
+}
+
+#whiteDivider{
+    width: 100px;
+    margin: 0 auto;
+    border-style: solid;
+    color: #ffffff;
+
+}
+.visionInfo{
+    text-align: center;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+}
+.visionOverlay{
+    background-color: transparent;
+    background-image: linear-gradient(310deg, #4cb74f 0%, #4dc2bf 100%);
+    opacity: 0.85;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+footer{
+    background-color: #222;
+    padding: 27px 0;
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+/**CONTACT PAGE!!! **/
+
+#contactSectionTop{
+    position: relative;
+    background-image: url(../img/pic12.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.contactOverlay{
+    background-color: transparent;
+    background-image: linear-gradient(310deg, #4cb74f 0%, #4dc2bf 100%);
+    opacity: 0.85;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.themeParaContact{
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1.2px;
+}
+.headerInfo{
+    font-size: 1.4rem;
+    letter-spacing: 1.2px;
+}
+
+/**Contact Section **/
+
+.contactSection{
+    padding: 60px 0 60px 0;
+}
+.contactMain{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+}
+.contactMainInner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+.contactMainInnerOne{
+    padding: 50px 50px 50px 50px;
+    line-height: 1.5rem;
+}
+.contactMainInnerOne p{
+    margin: 0 0 20px;
+}
+.contactMainInnerOne .contactHeader{
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+.contactMainInnerTwo{
+    input{
+        height: 41px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+.contactForm{
+    margin: 20px 20px 20px 20px;
+    position:relative;
+}
+
+.contactForm span{
+    /* position: absolute; */
+    color: red;
+}
+.textComment{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+
+#formSubmit{
+    background-color:#2E8B57;
+    width: 90px;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    height: 40px;
+}
+
+.fa-check{
+    color: green;
+    display: block;
+    padding-left: 3px;
+}
+
+.space{
+    padding-left: 10px;
+}
+
+/**UNDER CONSTRUCTION PAGES**/
+.events-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#goBack{
+    height: 35px;
+    width: 80px;
+    margin-top: 35px;
+}
+
+/** MEDIA QUERIES **/
+@media(max-width:800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menuButton{
+        display: block;
+    }
+    /** queries for expect section**/
+    .expectSection{
+        padding: 0;
+    }
+    .expectSection .expectInfoInner{
+        padding: 0;
+    }
+    .expectMainInner .expectPic{
+        display: none;
+        
+    }
+    .expectInfo{
+        width: 100%;
+    }
+    .paraDiv{
+        text-align: center;
+    }
+    /**queries for youth section **/
+    
+    .youthSection .youthInfoInner{
+        padding: 0;
+    }
+    .youthMainInner .youthPic{
+        display: none;
+    }
+    .youthInfo{
+        width: 100%;
+    }
+    .youthPara{
+        text-align: center;
+    }
+    .visionInner{
+        width: 100%;
+    }
+    #mainLogo{
+        height: 30px;
+    }
+    .contactMainInner{
+        gap: 30px;
+    }
+}
+
+@media(max-width:450px){
+    .sidebar{
+        width: 100%;
+    }
+    .contactMainInnerOne{
+        text-align: center;
+        padding: 0;
+    }
+}
+@media(max-width:630px){
+    .smallDetails{
+        padding: 0;
+    }
+    .largerScreenUL{
+        width: 100%;
+    }
+    .contactParaPara{
+        width: 100%;
+    }
+    .contactMainInnerTwo{
+        width: 100%;
+    }
+}

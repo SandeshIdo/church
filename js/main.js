@@ -17,16 +17,25 @@ var messageError = document.getElementById('message-error');
 var submitError = document.getElementById('submit-error');
 
 function validateName(){
-    var name = document.getElementById('user_name').value;
+    var name = document.getElementById('user_name').value.trimEnd();
+    const nameArr = name.split(' ');
+    console.log(nameArr.length);
 
     if(name.length == 0){
         nameError.innerHTML = 'Name is required';
         return false;
     }
-    if(!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
-        nameError.innerHTML = 'Write full name';
-        return false;
+    for(const nameVal of nameArr){
+        if(nameArr.length<2){
+            nameError.innerHTML = 'Write full name';
+            return false;
+        }
+        if(!nameVal.match(/^[A-Za-z]+$/)){
+            nameError.innerHTML = 'Only Alphabets Please';
+            return false;
+        }
     }
+
     nameError.innerHTML = '<i class="fa-solid fa-check"></i>';
     return true;
 }
@@ -48,15 +57,19 @@ function validateEmail(){
 }
 
 function validateSubject(){
-    var subject = document.getElementById('user_subject').value;
+    var subject = document.getElementById('user_subject').value.trimEnd();
+    const subjectArr = subject.split(' ');
 
     if(subject.length == 0 || subject.length>25){
         subjectError.innerHTML = 'No Subject or Too Long';
         return false;
     }
-    if(!subject.match(/^[A-Za-z]+$/)){
-        subjectError.innerHTML = "Only alphabets are allowed"
-        return false;
+
+    for (const subjectVal of subjectArr){
+        if(!subjectVal.match(/^[A-Za-z]+$/)){
+            subjectError.innerHTML = "Only alphabets are allowed"
+            return false;
+        }
     }
 
     subjectError.innerHTML = '<i class="fa-solid fa-check"></i>';
